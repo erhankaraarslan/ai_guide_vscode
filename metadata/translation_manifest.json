@@ -1,0 +1,10 @@
+{
+  "sync_info": {
+    "last_translation_run": "2026-03-08T22:00:00Z",
+    "total_translations": 52,
+    "translation_status_summary": {"ok": 52, "ok_with_warnings": 0, "manual_review_required": 0, "failed": 0}
+  },
+  "translations": [
+  {"source_path": "docs/copilot/overview.md", "translated_path": "tr/docs/copilot/overview.md", "source_sha": "38ed6460df28bfe8bbb5c138a6802a38f82d88f9", "source_hash": "5c7520d1e2d7c170b12d798fbae9a73cf870765399298313ac07eba850c22bfd", "translated_at": "2026-03-08", "translation_status": "ok", "needs_review": false}
+]
+}

@@ -1,0 +1,5 @@
+[2026-03-08 22:30:00] INFO: QA run started
+[2026-03-08 22:30:00] INFO: Checking 52 translated files
+[2026-03-08 22:30:00] INFO: Structure validation: heading levels preserved, links intact, code blocks unchanged
+[2026-03-08 22:30:00] INFO: QA summary: 52 ok, 0 ok_with_warnings, 0 manual_review_required, 0 failed
+[2026-03-08 22:30:00] INFO: QA complete

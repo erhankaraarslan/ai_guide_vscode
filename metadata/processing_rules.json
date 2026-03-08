@@ -1,0 +1,24 @@
+{
+  "source_repo": "https://github.com/microsoft/vscode-docs",
+  "source_path": "docs/copilot/",
+  "upstream_path": "upstream/docs/copilot/",
+  "translation_path": "tr/docs/copilot/",
+  "do_not_translate": [
+    "GitHub Copilot",
+    "Visual Studio Code",
+    "setting(...)",
+    "kb(...)",
+    "kbstyle(...)",
+    "JSON keys",
+    "CLI commands",
+    "file paths",
+    "code blocks"
+  ],
+  "preserve_structure": [
+    "headings",
+    "links",
+    "tables",
+    "admonitions",
+    "frontmatter"
+  ]
+}

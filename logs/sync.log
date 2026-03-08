@@ -1,0 +1,5 @@
+[2026-03-08 22:00:00] INFO: Mod 1 (initial setup) triggered - source_manifest.json not found
+[2026-03-08 22:00:00] INFO: Cloning microsoft/vscode-docs (sparse checkout: docs/copilot)
+[2026-03-08 22:00:05] INFO: Commit SHA: 38ed6460df28bfe8bbb5c138a6802a38f82d88f9
+[2026-03-08 22:00:05] INFO: Synced 52 MD files + images to upstream/docs/copilot/
+[2026-03-08 22:00:06] INFO: source_manifest.json created with 52 entries

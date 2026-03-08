@@ -1,0 +1,20 @@
+{
+  "inline suggestions": "satır içi öneriler",
+  "smart actions": "akıllı eylemler",
+  "agent sessions": "ajan oturumları",
+  "settings reference": "ayarlar başvurusu",
+  "custom instructions": "özel talimatlar",
+  "prompt files": "prompt dosyaları",
+  "inline chat": "satır içi sohbet",
+  "code suggestions": "kod önerileri",
+  "agent session": "ajan oturumu",
+  "chat view": "sohbet görünümü",
+  "workspace context": "çalışma alanı bağlamı",
+  "MCP servers": "MCP sunucuları",
+  "custom agents": "özel ajanlar",
+  "agent skills": "ajan becerileri",
+  "background agents": "arka plan ajanları",
+  "cloud agents": "bulut ajanları",
+  "local agents": "yerel ajanlar",
+  "third-party agents": "üçüncü taraf ajanlar"
+}

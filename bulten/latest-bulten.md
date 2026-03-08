@@ -2,34 +2,19 @@
 
 ## Özet
 - **Toplam taranan dosya sayısı:** 52
-- **Yeni doküman sayısı:** 52 (ilk senkron)
+- **Yeni doküman sayısı:** 0
 - **Güncellenen doküman sayısı:** 0
 - **Silinen / taşınan doküman sayısı:** 0
-- **Değişmeyen doküman sayısı:** 0
+- **Değişmeyen doküman sayısı:** 52
 
-## İlk Senkron
-İlk senkron 2026-03-08 tarihinde yapıldı. Kaynak: `microsoft/vscode-docs` deposu, commit: `38ed6460df28bfe8bbb5c138a6802a38f82d88f9`.
-
-## Yeni Dokümanlar
-Tüm 52 doküman ilk kez Türkçeye çevrildi. Kategori dağılımı:
-
-| Kategori | Dosya sayısı | Türkçe çıktı |
-|---------|--------------|--------------|
-| Kök | 12 | `tr/docs/copilot/*.md` |
-| chat/ | 9 | `tr/docs/copilot/chat/*.md` |
-| customization/ | 9 | `tr/docs/copilot/customization/*.md` |
-| agents/ | 11 | `tr/docs/copilot/agents/*.md` |
-| guides/ | 9 | `tr/docs/copilot/guides/*.md` |
-| reference/ | 4 | `tr/docs/copilot/reference/*.md` |
+## Güncelleme Çalıştırması (Mod 2)
+Kaynak senkronizasyonu tamamlandı. Tüm 52 dosya değişmeden kaldı; çeviri güncellemesi gerekmedi. **Görseller:** `git lfs pull` ile gerçek binary indirildi; LFS pointer yerine gerçek PNG/MP4/GIF kopyalandı.
 
 ## Dikkat Çeken Yenilikler
-- **Ajan oturumları:** Yerel, arka plan ve bulut ajanları; Plan ajanı
-- **Özelleştirme:** Özel talimatlar, özel ajanlar, hook dosyaları, MCP sunucuları
-- **Deneysel / Preview:** Birçok yeni ayar ve özellik
+Bu çalıştırmada kaynak tarafında içerik değişikliği tespit edilmedi.
 
 ## Manuel İnceleme Gereken Noktalar
-- Tüm çeviriler otomatik üretildi; teknik terim tutarlılığı için gözden geçirme önerilir
-- `copilot-tips-and-tricks.md` referansı overview'da var, docs/copilot altında ayrı dosya yok; kırık link riski
+- `copilot-tips-and-tricks.md` overview’da referans verilmiş ancak `docs/copilot` altında ayrı dosya yok; kırık link riski
 
 ---
 

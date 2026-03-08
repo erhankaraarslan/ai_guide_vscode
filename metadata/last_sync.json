@@ -1,13 +1,15 @@
 {
-  "last_sync_at": "2026-03-08T22:00:00Z",
+  "last_sync_at": "2026-03-08T23:52:00Z",
   "commit_sha": "38ed6460df28bfe8bbb5c138a6802a38f82d88f9",
   "source_repo": "https://github.com/microsoft/vscode-docs",
-  "mode": "initial",
+  "mode": "update",
   "files_processed": 52,
-  "files_translated": 52,
-  "files_new": 52,
+  "files_translated": 0,
+  "files_new": 0,
   "files_updated": 0,
-  "files_unchanged": 0,
+  "files_unchanged": 52,
   "files_deleted": 0,
-  "files_moved": 0
+  "files_moved": 0,
+  "images_updated": true,
+  "images_source": "git lfs pull ile gerçek binary"
 }

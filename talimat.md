@@ -30,6 +30,7 @@ Temel ilke:
 
 ### Ön gereksinimler
 - Git kurulu olmalı
+- **Git LFS** kurulu olmalı (`brew install git-lfs`; ardından `git lfs install`). Kaynak depodan gerçek görsel dosyalarını çekmek için gereklidir. Bu proje kendi repomuzda LFS kullanmaz; görseller normal dosya olarak commit edilir.
 - GitHub'a ağ erişimi olmalı
 - **project-root**: Bu talimat dosyasının bulunduğu dizin veya işlemin başlatıldığı ana klasör
 
@@ -46,6 +47,7 @@ Yapay zeka aşağıdaki içerikleri kapsamalıdır:
 
 Görseller:
 - Görseller (`images/`, `chat/images/` vb.) `upstream/docs/copilot/` altından `tr/docs/copilot/` altına aynı klasör yapısıyla kopyalanmalıdır. Sadece `.md` dosyaları çevrilir; görsel dosyalar olduğu gibi kopyalanır.
+- **Önemli:** Kaynak `vscode-docs` deposu görselleri Git LFS ile tutar. Klon aldıktan sonra `git lfs pull` çalıştırılmazsa yalnızca pointer (130 bayt metin) alınır; görseller görünmez. `git lfs pull` ile gerçek binary alındıktan sonra bu dosyalar **bu projede normal Git dosyası** olarak commit edilir (LFS kullanılmaz). Böylece push sonrası clone eden herkes görselleri doğrudan alır.
 
 Not:
 Başlangıç fazında kapsam yalnızca `docs/copilot/` ile sınırlıdır. İleride ihtiyaç olursa kapsam ayrı bir kararla genişletilebilir.
@@ -93,7 +95,8 @@ project-root/
 İlk çalıştırmada yapay zeka aşağıdaki adımları eksiksiz uygulamalıdır:
 
 ### 1. Kaynakları çek
-- Resmi `microsoft/vscode-docs` deposundan `docs/copilot/` altını al.
+- Resmi `microsoft/vscode-docs` deposundan `docs/copilot/` altını al (git clone veya sparse checkout).
+- Klon işleminden hemen sonra **`git lfs pull`** çalıştır. Bu adım olmadan görsel/video dosyaları LFS pointer kalır ve markdown önizlemede görünmez. Çekilen gerçek binary dosyalar `upstream/` ve `tr/` altına kopyalanacak; bu projede LFS değil normal Git olarak saklanacak.
 - Kaynak dosyaların birebir İngilizce kopyasını `upstream/docs/copilot/` altına yerleştir.
 - Her dosya için aşağıdaki metadata’yı çıkar:
   - relative path (proje köküne göre, örn. `docs/copilot/overview.md`)
@@ -159,6 +162,9 @@ Bu ilk bültende şunlar yazmalıdır:
 
 ### 1. Kaynağı yeniden senkronize et
 - Resmi repo’dan son durumu çek.
+- Klondan sonra **`git lfs pull`** çalıştırarak görsel/video dosyalarının gerçek binary içeriklerini indir. Kopyalanan görseller bu projede normal Git dosyası olarak saklanır.
+- `docs/copilot/` içeriğini (md + images) klondan `upstream/docs/copilot/` altına kopyala.
+- **Görselleri her senkron çalıştırmasında** `upstream/docs/copilot/images/` altından `tr/docs/copilot/images/` altına aynı yapıyla kopyala. Bu adım atlanmamalı; aksi halde tr tarafındaki görseller güncel kalmaz.
 - `docs/copilot/` altındaki mevcut dosya listesini çıkar.
 - Önceki `source_manifest.json` ile karşılaştır.
 
@@ -419,6 +425,8 @@ Yapay zekanın görevi şudur:
 
 ## Yapay zekanın asla atlamaması gereken maddeler
 - Sadece site HTML’ini parse ederek çalışmamalı
+- Kaynak klonlandıktan sonra **`git lfs pull`** yapmalı; görseller gerçek binary olarak alınmalı (pointer değil). Bu projede görseller normal Git dosyası olarak saklanır; LFS kullanılmaz.
+- **Her senkron çalıştırmasında** görselleri `upstream/docs/copilot/images/` altından `tr/docs/copilot/images/` altına kopyalamalı; bu adım atlanmamalı.
 - Önce manifest kontrol etmeli
 - Değişmeyen dosyaları yeniden çevirmemeli
 - Yeni dosyaları mutlaka Türkçeye eklemeli
@@ -466,17 +474,18 @@ Aşağıdaki durumlar olduğunda yapay zeka bunu log ve bültende belirtmelidir:
 ## Önerilen işlem sırası
 Her çalıştırmada şu sıra izlenmelidir:
 
-1. Kaynak repo’yu senkronize et
-2. `docs/copilot/` ağacını tara
-3. Manifest ile karşılaştır
-4. Dosyaları sınıflandır
-5. Yeni dosyaları çevir
-6. Güncellenen dosyaları diff bazlı güncelle
-7. Silinen / taşınan dosyaları işle
-8. QA yap
-9. Manifestleri güncelle
-10. Bülteni üret
-11. `latest-bulten.md` dosyasını yenile
+1. Kaynak repo’yu senkronize et (klondan sonra `git lfs pull` ile görselleri indir; upstream’e kopyala)
+2. Görselleri `upstream/docs/copilot/images/` -> `tr/docs/copilot/images/` kopyala (her çalıştırmada)
+3. `docs/copilot/` ağacını tara
+4. Manifest ile karşılaştır
+5. Dosyaları sınıflandır
+6. Yeni dosyaları çevir
+7. Güncellenen dosyaları diff bazlı güncelle
+8. Silinen / taşınan dosyaları işle
+9. QA yap
+10. Manifestleri güncelle
+11. Bülteni üret
+12. `latest-bulten.md` dosyasını yenile
 
 ---
 

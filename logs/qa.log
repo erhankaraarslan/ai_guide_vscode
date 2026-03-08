@@ -3,3 +3,7 @@
 [2026-03-08 22:30:00] INFO: Structure validation: heading levels preserved, links intact, code blocks unchanged
 [2026-03-08 22:30:00] INFO: QA summary: 52 ok, 0 ok_with_warnings, 0 manual_review_required, 0 failed
 [2026-03-08 22:30:00] INFO: QA complete
+[2026-03-08 23:45:00] INFO: QA run (Mod 2 update) - no translation changes; sampled structure validation passed
+[2026-03-08 23:45:00] INFO: overview.md, agent-skills.md: headings/codeblocks/links match upstream
+[2026-03-08 23:52:00] INFO: QA run - görseller gerçek PNG/MP4/GIF; extensions-view.png 36052 byte doğrulandı
+[2026-03-08 23:52:00] INFO: 52 MD dosyası unchanged; görseller upstream ve tr'de güncel

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copilot Günlük İpucu #36</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f7fee7; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f7fee7;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); overflow: hidden;">
+          <tr>
+            <td style="padding: 32px 32px 24px; background: linear-gradient(135deg, #84cc16 0%, #65a30d 50%, #4d7c0f 100%);">
+              <span style="font-size: 12px; color: #bef264; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">GitHub Copilot</span>
+              <h1 style="margin: 8px 0 0; font-size: 24px; font-weight: 700; color: #ffffff;">Günlük İpucu #36</h1>
+              <p style="margin: 4px 0 0; font-size: 14px; color: #bef264;">İleri · .prompt.md</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 32px;">
+              <h2 style="margin: 0 0 16px; font-size: 18px; font-weight: 600; color: #1e293b;">Prompt dosyası ileri düzey</h2>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 24px 0;">
+                <tr>
+                  <td style="border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+                    <img src="https://raw.githubusercontent.com/erhankaraarslan/ai_guide_vscode/main/tr/docs/copilot/images/customization/prompt-file-recommendations.png" alt="Prompt dosyası ileri düzey" width="536" style="display: block; max-width: 100%; height: auto; width: 100%;" />
+                  </td>
+                </tr>
+              </table>
+
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #84cc16;">İpucu 1</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">agent: + prompt: + model:</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">.prompt.md'de agent: hangi ajana geçileceği, prompt: varsayılan istem, model: sabit model. Tek komutla tam kurulum.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">agent: inceleme-ajani</li>
+<li style="margin: 4px 0;">prompt: «Bu değişiklikleri incele...»</li>
+<li style="margin: 4px 0;">model: ['Claude Sonnet']</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #84cc16;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">/code-review → inceleme ajana geç, prompt hazır, model sabit</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #84cc16;">İpucu 2</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Placeholder ve değişkenler</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">VS Code prompt dosyalarında ${fileBasename}, ${relativeFile} gibi placeholder'lar desteklenir. Örn. ${fileBasename} ile seçili dosya adı enjekte edilir. Dokümantasyonda tam listeyi kontrol edin.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">Placeholder varsa kullanın</li>
+<li style="margin: 4px 0;">Örn: ${fileBasename}, ${relativeFile}</li>
+<li style="margin: 4px 0;">Desteklenmiyorsa sabit metin</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #84cc16;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">prompt: «${fileBasename} dosyasını incele»</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #84cc16;">İpucu 3</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Prompt kategorileri</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">Farklı iş türleri için: /code-review, /security-check, /refactor, /explain. Her biri ayrı .prompt.md. /prompts ile hepsini yönetin.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">.github/prompts/ altında kategorize edin</li>
+<li style="margin: 4px 0;">security-check.prompt.md, refactor.prompt.md</li>
+<li style="margin: 4px 0;">Kısa isimler: /sec, /refactor</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #84cc16;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">/sec → güvenlik. /refactor → refaktör.</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 28px;">
+                <tr>
+                  <td>
+                    <a href="https://code.visualstudio.com/docs/copilot/customization/prompt-files" style="display: inline-block; padding: 12px 24px; background: #84cc16; color: #ffffff !important; text-decoration: none; font-size: 14px; font-weight: 600; border-radius: 8px;">Prompt dosyaları →</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 24px 32px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+              <p style="margin: 0; font-size: 12px; color: #64748b;">VS Code Copilot, GitHub Docs, GitHub Blog ve GitHub Trust Center içeriklerinden derlenmiştir.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

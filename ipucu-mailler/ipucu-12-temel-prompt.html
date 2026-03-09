@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copilot Günlük İpucu #12</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f7fee7; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f7fee7;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); overflow: hidden;">
+          <tr>
+            <td style="padding: 32px 32px 24px; background: linear-gradient(135deg, #84cc16 0%, #65a30d 50%, #4d7c0f 100%);">
+              <span style="font-size: 12px; color: #bef264; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">GitHub Copilot</span>
+              <h1 style="margin: 8px 0 0; font-size: 24px; font-weight: 700; color: #ffffff;">Günlük İpucu #12</h1>
+              <p style="margin: 4px 0 0; font-size: 14px; color: #bef264;">Temel · Prompt</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 32px;">
+              <h2 style="margin: 0 0 16px; font-size: 18px; font-weight: 600; color: #1e293b;">Belirli ve net istemler</h2>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 24px 0;">
+                <tr>
+                  <td style="border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+                    <img src="https://raw.githubusercontent.com/erhankaraarslan/ai_guide_vscode/main/tr/docs/copilot/images/prompt-engineering-guide/fibonacci-first.png" alt="Belirli ve net istemler" width="536" style="display: block; max-width: 100%; height: auto; width: 100%;" />
+                  </td>
+                </tr>
+              </table>
+
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #84cc16;">İpucu 1</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">'Make better' yeterli değil</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">Ne tür iyileştirme? Performans mı, okunabilirlik mi, hata kontrolü mü? Önce genel hedef verin, sonra spesifik kriterler ekleyin. Somut hedef yazın.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">Hedefi net belirtin: 'O(n) yap', 'null kontrolü ekle'</li>
+<li style="margin: 4px 0;">Ölçülebilir kriter verin</li>
+<li style="margin: 4px 0;">Kısıtlama: dil, kütüphane, format</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #84cc16;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">«Zaman karmaşıklığını azalt» veya «Null için boş dizi dön»</p>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 12px; color: #64748b;">Kaynak: <a href="https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot" style="color: #84cc16; text-decoration: none;">GitHub Docs</a></p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #84cc16;">İpucu 2</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Giriş + çıkış + kısıtlama</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">Örnek giriş/çıkış AI'ın ne beklediğinizi anlamasını sağlar. Unit testler de örnek olarak kullanılabilir — önce test yazdırıp sonra fonksiyonu o testlere göre yazdırabilirsiniz. Hangi dili, framework'ü kullanacağını belirtin.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">Ne yapılacağını yazın</li>
+<li style="margin: 4px 0;">Örnek: validateEmail('a@b.com')→true</li>
+<li style="margin: 4px 0;">Kısıtlama: 'regex kullanma', 'TypeScript'</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #84cc16;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">«Email doğrula: a@b.com→true, x→false. Regex kullanma.»</p>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 12px; color: #64748b;">Kaynak: <a href="https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot" style="color: #84cc16; text-decoration: none;">GitHub Docs</a></p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #84cc16;">İpucu 3</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Beklenen çıktı ekleyin</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">Test senaryosu veya kabul kriteri verirseniz AI ürettiğini doğrulayabilir. Cookbook'da debug, rate limit, JSON validation gibi 30+ örnek var. En yüksek kaldıraçlı adımlardan biri.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">İstemin sonuna 'X yapmalı, Y yapmamalı' ekleyin</li>
+<li style="margin: 4px 0;">'Testleri çalıştır' deyin</li>
+<li style="margin: 4px 0;">Sayısal kriter: '10 req/sn, 11. reddedilmeli'</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #84cc16;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">«Rate limiter: 10 req/sn. Test yaz ve çalıştır.»</p>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 12px; color: #64748b;">Kaynak: <a href="https://docs.github.com/en/copilot/example-prompts-for-github-copilot-chat" style="color: #84cc16; text-decoration: none;">GitHub Docs</a></p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 28px;">
+                <tr>
+                  <td>
+                    <a href="https://code.visualstudio.com/docs/copilot/guides/prompt-engineering-guide" style="display: inline-block; padding: 12px 24px; background: #84cc16; color: #ffffff !important; text-decoration: none; font-size: 14px; font-weight: 600; border-radius: 8px;">Prompt mühendisliği →</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 24px 32px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+              <p style="margin: 0; font-size: 12px; color: #64748b;">VS Code Copilot, GitHub Docs, GitHub Blog ve GitHub Trust Center içeriklerinden derlenmiştir.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

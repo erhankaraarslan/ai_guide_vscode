@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copilot Günlük İpucu #22</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f3ff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f5f3ff;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); overflow: hidden;">
+          <tr>
+            <td style="padding: 32px 32px 24px; background: linear-gradient(135deg, #4f46e5 0%, #4338ca 50%, #3730a3 100%);">
+              <span style="font-size: 12px; color: #c7d2fe; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">GitHub Copilot</span>
+              <h1 style="margin: 8px 0 0; font-size: 24px; font-weight: 700; color: #ffffff;">Günlük İpucu #22</h1>
+              <p style="margin: 4px 0 0; font-size: 14px; color: #c7d2fe;">Orta · Scale</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 32px;">
+              <h2 style="margin: 0 0 16px; font-size: 18px; font-weight: 600; color: #1e293b;">Büyük kod tabanları</h2>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 24px 0;">
+                <tr>
+                  <td style="border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+                    <img src="https://raw.githubusercontent.com/erhankaraarslan/ai_guide_vscode/main/tr/docs/copilot/images/context-engineering-guide/context-engineering-workflow.png" alt="Büyük kod tabanları" width="536" style="display: block; max-width: 100%; height: auto; width: 100%;" />
+                  </td>
+                </tr>
+              </table>
+
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #4f46e5;">İpucu 1</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Çalışma alanı indekslemesi</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">VS Code projeyi indeksler; #codebase ile hızlı semantik arama. Basic (daha basit algoritma), local (yerel semantik) veya remote (GitHub depo) indeks seçenekleri. Büyük depolarda remote daha hızlı.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">Proje açıkken arka planda indekslenir</li>
+<li style="margin: 4px 0;">Status bar'da durumu kontrol edin</li>
+<li style="margin: 4px 0;">Büyük depo için remote index açın</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #4f46e5;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">1000+ dosyada #codebase ile 'auth nerede?'</p>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 12px; color: #64748b;">Kaynak: <a href="https://code.visualstudio.com/docs/copilot/copilot-chat-context" style="color: #4f46e5; text-decoration: none;">VS Code Docs</a></p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #4f46e5;">İpucu 2</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Proje düzeyinde talimatlar</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">Mimari, modül sınırları, API sözleşmeleri gibi AI'ın koddan çıkaramayacağı bilgileri copilot-instructions.md'de verin. PRODUCT.md (ürün vizyonu), ARCHITECTURE.md (mimari), CONTRIBUTING.md (katkı rehberi) ile karar verme bağlamını zenginleştirin.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">ARCHITECTURE.md, CONTRIBUTING.md referansları</li>
+<li style="margin: 4px 0;">Modül sınırları: 'X Y'yi import etmemeli'</li>
+<li style="margin: 4px 0;">Kısa ve odaklı</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #4f46e5;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">«API layer sadece services/ ile konuşur»</p>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 12px; color: #64748b;">Kaynak: <a href="https://code.visualstudio.com/docs/copilot/guides/context-engineering-guide" style="color: #4f46e5; text-decoration: none;">VS Code Context Guide</a></p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #4f46e5;">İpucu 3</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Monorepo'da odaklı bağlam</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">Multi-root workspace'te AI'a hangi köke odaklanacağını net verin. #packages/auth gibi spesifik referans. Bağlam mühendisliği ölçeklendirmede proje geneli, modül ve özellik katmanları düşünün.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">File > Add Folder ile multi-root</li>
+<li style="margin: 4px 0;">#packages/api gibi belirli kök</li>
+<li style="margin: 4px 0;">Tüm monorepo'yu eklemeyin</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #4f46e5;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">#packages/api veya #apps/web</p>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 12px; color: #64748b;">Kaynak: <a href="https://code.visualstudio.com/docs/copilot/guides/context-engineering-guide" style="color: #4f46e5; text-decoration: none;">VS Code Context Guide</a></p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 28px;">
+                <tr>
+                  <td>
+                    <a href="https://code.visualstudio.com/docs/copilot/reference/workspace-context" style="display: inline-block; padding: 12px 24px; background: #4f46e5; color: #ffffff !important; text-decoration: none; font-size: 14px; font-weight: 600; border-radius: 8px;">Çalışma alanı bağlamı →</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 24px 32px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+              <p style="margin: 0; font-size: 12px; color: #64748b;">VS Code Copilot, GitHub Docs, GitHub Blog ve GitHub Trust Center içeriklerinden derlenmiştir.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

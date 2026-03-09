@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copilot Günlük İpucu #32</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #ecfeff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ecfeff;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); overflow: hidden;">
+          <tr>
+            <td style="padding: 32px 32px 24px; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);">
+              <span style="font-size: 12px; color: #67e8f9; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">GitHub Copilot</span>
+              <h1 style="margin: 8px 0 0; font-size: 24px; font-weight: 700; color: #ffffff;">Günlük İpucu #32</h1>
+              <p style="margin: 4px 0 0; font-size: 14px; color: #67e8f9;">İleri · Orchestration</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 32px;">
+              <h2 style="margin: 0 0 16px; font-size: 18px; font-weight: 600; color: #1e293b;">Çok aşamalı handoff zinciri</h2>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 24px 0;">
+                <tr>
+                  <td style="border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+                    <img src="https://raw.githubusercontent.com/erhankaraarslan/ai_guide_vscode/main/tr/docs/copilot/images/agents-overview/hand-off-agent-session.png" alt="Çok aşamalı handoff zinciri" width="536" style="display: block; max-width: 100%; height: auto; width: 100%;" />
+                  </td>
+                </tr>
+              </table>
+
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #06b6d4;">İpucu 1</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">3+ ajan zinciri</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">Plan → Uygulama → İnceleme → Dağıtım gibi uzun zincirler. Her ajan sonunda handoff ile sonrakine geçiş. Karmaşık iş akışları için.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">plan.agent.md → impl → review → deploy</li>
+<li style="margin: 4px 0;">Her handoff'ta prompt: ile ne yapılacağını yazın</li>
+<li style="margin: 4px 0;">Zincir uzadıkça kontrol noktaları önemli</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #06b6d4;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">Plan → Impl → Review → Deploy handoff zinciri</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #06b6d4;">İpucu 2</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Koşullu handoff</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">handoffs: bölümünde birden fazla düğme. Kullanıcı duruma göre 'Düzelt' veya 'Devam' seçebilir. Aynı ajanda farklı hedefler.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">handoffs: altında 2+ giriş</li>
+<li style="margin: 4px 0;">label, agent, prompt her biri farklı</li>
+<li style="margin: 4px 0;">Örn: Düzelt → Plan. Devam → Impl.</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #06b6d4;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">Plan eksikse: Düzelt düğmesi. Tamamlaysa: Devam.</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #06b6d4;">İpucu 3</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Handoff bağlam iletimi</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">Handoff'ta prompt: yazarken «Yukarıdaki plan», «Bu değişiklikler» gibi referanslarla önceki çıktıyı iletin. AI otomatik bağlam alır.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">prompt: «Yukarıdaki plana göre 1. adımı uygula»</li>
+<li style="margin: 4px 0;">Önceki mesajda zaten plan var</li>
+<li style="margin: 4px 0;">Ek dosya eklemenize gerek kalmaz</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #06b6d4;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">Handoff prompt: Plandaki adımları sırayla uygula</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 28px;">
+                <tr>
+                  <td>
+                    <a href="https://code.visualstudio.com/docs/copilot/customization/custom-agents" style="display: inline-block; padding: 12px 24px; background: #06b6d4; color: #ffffff !important; text-decoration: none; font-size: 14px; font-weight: 600; border-radius: 8px;">Custom agents →</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 24px 32px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+              <p style="margin: 0; font-size: 12px; color: #64748b;">VS Code Copilot, GitHub Docs, GitHub Blog ve GitHub Trust Center içeriklerinden derlenmiştir.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

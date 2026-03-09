@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copilot Günlük İpucu #25</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #faf5ff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #faf5ff;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); overflow: hidden;">
+          <tr>
+            <td style="padding: 32px 32px 24px; background: linear-gradient(135deg, #a855f7 0%, #9333ea 50%, #7e22ce 100%);">
+              <span style="font-size: 12px; color: #d8b4fe; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">GitHub Copilot</span>
+              <h1 style="margin: 8px 0 0; font-size: 24px; font-weight: 700; color: #ffffff;">Günlük İpucu #25</h1>
+              <p style="margin: 4px 0 0; font-size: 14px; color: #d8b4fe;">Orta · Model özelleştirme</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 32px;">
+              <h2 style="margin: 0 0 16px; font-size: 18px; font-weight: 600; color: #1e293b;">model: ile ajana özel model</h2>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 24px 0;">
+                <tr>
+                  <td style="border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+                    <img src="https://raw.githubusercontent.com/erhankaraarslan/ai_guide_vscode/main/tr/docs/copilot/images/language-models/model-dropdown-change-model.png" alt="model: ile ajana özel model" width="536" style="display: block; max-width: 100%; height: auto; width: 100%;" />
+                  </td>
+                </tr>
+              </table>
+
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #a855f7;">İpucu 1</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Her ajana uygun model</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">Planlama gibi karmaşık işler için büyük model, basit kod yazımı için küçük model. .agent.md'de model: alanı ile atayın.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">.agent.md üstünde model: ['Model Adı']</li>
+<li style="margin: 4px 0;">Chat'te mevcut modelleri kontrol edin</li>
+<li style="margin: 4px 0;">Başlangıçta varsayılan, ileride özelleştirin</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #a855f7;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">Planlama: model: ['Claude Sonnet']. Uygulama: daha küçük model.</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #a855f7;">İpucu 2</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Maliyet ve hız dengesi</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">Büyük modeller pahalı ve yavaş; küçük modeller hızlı ve ucuz. Görev karmaşıklığına göre seçin.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">Planlama → büyük model</li>
+<li style="margin: 4px 0;">Uygulama (açık talimatlar) → küçük model</li>
+<li style="margin: 4px 0;">Deneyerek karar verin</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #a855f7;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">Uygulama ajanı: Claude Haiku deneyin</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #a855f7;">İpucu 3</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Prompt dosyasında model</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">.prompt.md içinde de model: tanımlayabilirsiniz. O prompt çağrıldığında her zaman bu model kullanılır.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">code-review.prompt.md: model: ['Claude Sonnet']</li>
+<li style="margin: 4px 0;">İnceleme için tutarlı büyük model</li>
+<li style="margin: 4px 0;">Her seferinde seçmeye gerek kalmaz</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #a855f7;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">İnceleme prompt'u: model sabitleyin</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 28px;">
+                <tr>
+                  <td>
+                    <a href="https://code.visualstudio.com/docs/copilot/customization/language-models" style="display: inline-block; padding: 12px 24px; background: #a855f7; color: #ffffff !important; text-decoration: none; font-size: 14px; font-weight: 600; border-radius: 8px;">Dil modelleri →</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 24px 32px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+              <p style="margin: 0; font-size: 12px; color: #64748b;">VS Code Copilot, GitHub Docs, GitHub Blog ve GitHub Trust Center içeriklerinden derlenmiştir.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

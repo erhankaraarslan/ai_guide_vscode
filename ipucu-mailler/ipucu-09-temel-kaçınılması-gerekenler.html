@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copilot Günlük İpucu #9</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #fef2f2; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #fef2f2;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); overflow: hidden;">
+          <tr>
+            <td style="padding: 32px 32px 24px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);">
+              <span style="font-size: 12px; color: #fca5a5; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">GitHub Copilot</span>
+              <h1 style="margin: 8px 0 0; font-size: 24px; font-weight: 700; color: #ffffff;">Günlük İpucu #9</h1>
+              <p style="margin: 4px 0 0; font-size: 14px; color: #fca5a5;">Temel · Kaçınılması gerekenler</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 32px;">
+              <h2 style="margin: 0 0 16px; font-size: 18px; font-weight: 600; color: #1e293b;">Bağlam anti-patterns</h2>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 24px 0;">
+                <tr>
+                  <td style="border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+                    <img src="https://raw.githubusercontent.com/erhankaraarslan/ai_guide_vscode/main/tr/docs/copilot/images/core-concepts/context-assembly.png" alt="Bağlam anti-patterns" width="536" style="display: block; max-width: 100%; height: auto; width: 100%;" />
+                  </td>
+                </tr>
+              </table>
+
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #ef4444;">İpucu 1</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Bağlam dökümü yapmayın</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">İlgisiz veya çok fazla dosya eklemek AI'ı karıştırır. Önemli bilgi kaybolur, maliyet artar. Context dumping anti-pattern'den kaçının: odaklanmamış, karar vermeye yardımcı olmayan bilgi yığını eklemeyin.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">İlk mesajda 1–2 dosya veya #codebase yeterli olabilir</li>
+<li style="margin: 4px 0;">Tüm src/ yerine #src/auth/ gibi odaklı referans verin</li>
+<li style="margin: 4px 0;">AI 'daha fazla lazım' derse ekleyin</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #ef4444;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">Tüm projeyi değil: #src/auth/ veya #config.ts</p>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 12px; color: #64748b;">Kaynak: <a href="https://code.visualstudio.com/docs/copilot/guides/context-engineering-guide" style="color: #ef4444; text-decoration: none;">VS Code Context Guide</a></p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #ef4444;">İpucu 2</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Küçük başlayın</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">Talimat dosyalarında önce en kritik 5–10 kuralı yazın. Üst düzey mimariye odaklanın. AI sürekli aynı hatayı yapıyorsa o zaman yeni kural ekleyin. Bağlam mühendisliğinde 'start small and iterate' prensibi — context overload'dan kaçının.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">copilot-instructions.md'de 1–2 sayfa yeterli</li>
+<li style="margin: 4px 0;">Genel bilgileri (AI'ın bildiği) yazmayın</li>
+<li style="margin: 4px 0;">Zamanla ihtiyaca göre ekleyin</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #ef4444;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">«API prefix /api/v1. Hata formatı { code, message }»</p>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 12px; color: #64748b;">Kaynak: <a href="https://code.visualstudio.com/docs/copilot/guides/context-engineering-guide" style="color: #ef4444; text-decoration: none;">VS Code Context Guide</a></p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #ef4444;">İpucu 3</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Belirsiz istemlerden kaçının</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">'İyileştir', 'düzelt', 'better' yeterli değil. Ne tür iyileştirme? Ölçülebilir kriter veya örnek giriş/çıkış ekleyin. Belirsiz kütüphane referansları da sorun — spesifik import veya kütüphane adı yazın.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">Hedefi net yazın</li>
+<li style="margin: 4px 0;">Ölçülebilir kriter: hız, format, kısıtlama</li>
+<li style="margin: 4px 0;">Örnek: 'O(n) yap' veya 'Null için [] dönsün'</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #ef4444;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">«Bu fonksiyonu O(n) yap» — somut hedef</p>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 12px; color: #64748b;">Kaynak: <a href="https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot" style="color: #ef4444; text-decoration: none;">GitHub Docs</a></p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 28px;">
+                <tr>
+                  <td>
+                    <a href="https://code.visualstudio.com/docs/copilot/guides/context-engineering-guide" style="display: inline-block; padding: 12px 24px; background: #ef4444; color: #ffffff !important; text-decoration: none; font-size: 14px; font-weight: 600; border-radius: 8px;">Bağlam mühendisliği →</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 24px 32px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+              <p style="margin: 0; font-size: 12px; color: #64748b;">VS Code Copilot, GitHub Docs, GitHub Blog ve GitHub Trust Center içeriklerinden derlenmiştir.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

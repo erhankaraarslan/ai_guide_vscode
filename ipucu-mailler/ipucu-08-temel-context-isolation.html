@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copilot Günlük İpucu #8</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f3ff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f5f3ff;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); overflow: hidden;">
+          <tr>
+            <td style="padding: 32px 32px 24px; background: linear-gradient(135deg, #4f46e5 0%, #4338ca 50%, #3730a3 100%);">
+              <span style="font-size: 12px; color: #c7d2fe; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">GitHub Copilot</span>
+              <h1 style="margin: 8px 0 0; font-size: 24px; font-weight: 700; color: #ffffff;">Günlük İpucu #8</h1>
+              <p style="margin: 4px 0 0; font-size: 14px; color: #c7d2fe;">Temel · Context isolation</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 32px;">
+              <h2 style="margin: 0 0 16px; font-size: 18px; font-weight: 600; color: #1e293b;">Farklı işler için ayrı sohbet</h2>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 24px 0;">
+                <tr>
+                  <td style="border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+                    <img src="https://raw.githubusercontent.com/erhankaraarslan/ai_guide_vscode/main/tr/docs/copilot/images/agents-overview/chat-view-compact2.png" alt="Farklı işler için ayrı sohbet" width="536" style="display: block; max-width: 100%; height: auto; width: 100%;" />
+                  </td>
+                </tr>
+              </table>
+
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #4f46e5;">İpucu 1</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Neden ayrı sohbet?</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">AI sohbet geçmişindeki her şeyi kullanır. Planlama, kodlama ve hata ayıklamayı aynı sohbette yaparsanız bağlam karışır; hem kalite düşer hem maliyet artar. Artık ilgili olmayan soruları silerek de sohbeti temiz tutabilirsiniz.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">Her iş türü için yeni sohbet açın</li>
+<li style="margin: 4px 0;">Artık ilgili olmayan mesajları silin (bağlamı sadeleştirir)</li>
+<li style="margin: 4px 0;">Chat panelinde + veya 'New Chat' butonuna tıklayın</li>
+<li style="margin: 4px 0;">Örn: Plan bittikten sonra yeni sohbet açıp 'Bu plana göre uygula' yazın</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #4f46e5;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">Planlama sohbeti bitti → New Chat → «Plandaki 1. adımı uygula»</p>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 12px; color: #64748b;">Kaynak: <a href="https://github.blog/2024-03-25-how-to-use-github-copilot-in-your-ide-tips-tricks-and-best-practices/" style="color: #4f46e5; text-decoration: none;">GitHub Blog</a></p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #4f46e5;">İpucu 2</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Bağlam penceresi nedir?</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">AI'ın okuyabildiği bilgi miktarı sınırlıdır (bağlam penceresi). Her eklediğiniz dosya ve mesaj bu alanı doldurur. Chat giriş kutusundaki göstergede token kullanımını takip edin; dolunca otomatik sıkıştırma olur. Gereksiz bilgi eklemeyin; önce az başlayın.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">İlk mesajda sadece soru + 1–2 dosya referansı verin</li>
+<li style="margin: 4px 0;">AI yeterli bulamazsa sonraki mesajda ekleyin</li>
+<li style="margin: 4px 0;">Tüm projeyi değil ilgili klasörü (# ile) verin</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #4f46e5;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">Önce «#src/auth/ bu klasör ne yapıyor?» — yetmezse ekleyin</p>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 12px; color: #64748b;">Kaynak: <a href="https://code.visualstudio.com/docs/copilot/copilot-chat-context" style="color: #4f46e5; text-decoration: none;">VS Code Docs</a></p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background: #fafafa; border-bottom: 1px solid #e2e8f0;">
+                    <strong style="font-size: 14px; color: #4f46e5;">İpucu 3</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #1e293b;">Konu değişince</p>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #475569;">Farklı proje veya konuya geçtiğinizde mutlaka yeni sohbet açın. İlgisiz sorular aynı sohbette hem AI'ı karıştırır hem token israfına yol açar. /new veya + ile yeni konuşma; geçmişi temiz tutun.</p>
+                    <p style="margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Nasıl yapılır:</p>
+                    <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.7; color: #475569;"><li style="margin: 4px 0;">Konu değişti mi? → New Chat</li>
+<li style="margin: 4px 0;">Farklı dosya grubu mu? → New Chat</li>
+<li style="margin: 4px 0;">Uzun sohbet 10+ mesaj oldu mu? → /compact veya New Chat</li></ol>
+                    <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid #4f46e5;">
+                      <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; color: #64748b;">Deneyebileceğiniz örnek:</p>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155; font-style: italic;">Login bitti, şimdi veritabanı → yeni sohbet</p>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 12px; color: #64748b;">Kaynak: <a href="https://docs.github.com/en/copilot/using-github-copilot/github-copilot-chat-cheat-sheet" style="color: #4f46e5; text-decoration: none;">GitHub Docs</a></p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 28px;">
+                <tr>
+                  <td>
+                    <a href="https://code.visualstudio.com/docs/copilot/guides/context-engineering-guide" style="display: inline-block; padding: 12px 24px; background: #4f46e5; color: #ffffff !important; text-decoration: none; font-size: 14px; font-weight: 600; border-radius: 8px;">Bağlam mühendisliği →</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 24px 32px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+              <p style="margin: 0; font-size: 12px; color: #64748b;">VS Code Copilot, GitHub Docs, GitHub Blog ve GitHub Trust Center içeriklerinden derlenmiştir.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
